@@ -84,7 +84,7 @@ end
 
 EXEID3 = find_executable 'id3tool'
 if EXEID3.nil? 
-  puts "id3tool package not found!"
+  puts "ERROR: id3tool package not found!"
   Kernel.exit(false)
 else
 
@@ -117,7 +117,7 @@ else
   when '-help'
     help
   else 
-    puts "Invalid option. Type help for usage"
+    puts "ERROR: Invalid option. Type fixsongs -help for usage"
   end
 end 
 
