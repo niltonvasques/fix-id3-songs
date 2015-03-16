@@ -1,6 +1,6 @@
 # fix-id3-songs
 
-A Ruby script taht intend fix id3 songs info as artist, album and title.
+A Ruby script that intend fix id3 songs info as artist, album and title.
 
 ## SYNOPSIS
     fixsongs [OPTION] [-a ARTIST] [-D DIR_PATTERN]"
