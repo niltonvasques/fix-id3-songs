@@ -59,14 +59,16 @@ def parse(opts = {} )
       puts album
       Dir[folder+'*.mp3'].each do |music|
         file = music.split('/')[1]
+        track = file.split('.')[0]
         name = file.split('-')[1].strip.split('.mp3')[0]
 
         case opts[:cmd]
         when '-list'
           system( "id3tool '#{music}'")
         when '-set'
-          system( "id3tool -r '#{opts[:artist]}' -t '#{name}' -a '#{album}' '#{music}'")
+          system( "id3tool -c '#{track}' -r '#{opts[:artist]}' -t '#{name}' -a '#{album}' '#{music}'")
         when '-parse'
+          puts "Track: #{track}"
           puts "Album: #{album}"
           puts "Song: #{name}"
         when '-help'
